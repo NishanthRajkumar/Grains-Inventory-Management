@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Sona Rice",
+    "Weight": 30.5,
+    "PricePerKG": 80
+  },
+  {
+    "Name": "Green gram",
+    "Weight": 25,
+    "PricePerKG": 60
+  },
+  {
+    "Name": "Pigeon pea",
+    "Weight": 40.8,
+    "PricePerKG": 80
+  },
+  {
+    "Name": "Aashirvaad Atta",
+    "Weight": 10,
+    "PricePerKG": 100
+  }
+]
