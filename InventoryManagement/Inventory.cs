@@ -1,11 +1,12 @@
-﻿namespace InventoryManagement;
+﻿using System.Text.Json;
+
+namespace InventoryManagement;
 
 public class Inventory
 {
     public string Name { get; set; }
     public double Weight { get; set; }
     public double PricePerKG { get; set; }
-    public double Value { get { return Weight * PricePerKG; } }
 
     public Inventory()
     {
@@ -36,5 +37,20 @@ public class Inventory
         Name = name;
         Weight = weight;
         PricePerKG = pricePerKG;
+    }
+
+    /// <summary>
+    /// Gets the json string for the inventory.
+    /// </summary>
+    /// <returns></returns>
+    public string GetJsonString()
+    {
+        var option = new JsonSerializerOptions { WriteIndented = true };
+        return JsonSerializer.Serialize<Inventory>(new Inventory(Name, Weight, PricePerKG), option);
+    }
+
+    public double GetValue()
+    {
+        return Weight * PricePerKG;
     }
 }
